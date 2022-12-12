@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
 import { FunctionalitysListComponent } from './functionalitys-list/functionalitys-list.component';
 import { ComponentsListComponent } from './components-list/components-list.component';
+import { ComponentSingleComponent } from './component-single/component-single.component';
+import { FunctionalitySingleComponent } from './functionality-single/functionality-single.component';
+import { ProjectSingleComponent } from './project-single/project-single.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsListComponent,
     FunctionalitysListComponent,
-    ComponentsListComponent
+    ComponentsListComponent,
+    ComponentSingleComponent,
+    FunctionalitySingleComponent,
+    ProjectSingleComponent
   ],
   imports: [
     BrowserModule,

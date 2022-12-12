@@ -1,12 +1,17 @@
+import { Component } from './Component';
+
 export class Functionality {
 
     constructor(
-        public id : number ,
-        public name : string ,
-        public describ: string ,
-        public version : number
-    ){
-
-    }
-  
+        public functionality : {
+            id : number ,
+            name : string ,
+            describ: string ,
+            version : number,
+            dateStart : Date,
+            date : Date,
+            dateEnd?: Date ,
+        }
+      
+    ){}
 }

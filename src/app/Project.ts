@@ -1,10 +1,11 @@
-export class Projet {
+import { Functionality } from './Functionality';
+export class Project {
 
     constructor(
         public id : number ,
         public name : string ,
         public describ: string ,
-        public date : Date
+        public dateStar : Date 
     ){
 
     }

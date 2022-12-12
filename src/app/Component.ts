@@ -1,10 +1,16 @@
 export class Component{
 
     constructor(
-        public id : number ,
-        public name : string ,
-        public describ: string ,
-        public version : number
+        public component :{
+            id : number ,
+            name : string ,
+            describ: string ,
+            version : number,
+            dateStart : Date,
+            date : Date,
+            dateEnd?: Date 
+        }
+     
     ){
 
     }
