@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProjectsListComponent } from './projects-list/projects-list.component';
-import { FunctionalitysListComponent } from './functionalitys-list/functionalitys-list.component';
-import { ComponentsListComponent } from './components-list/components-list.component';
-import { ComponentSingleComponent } from './component-single/component-single.component';
-import { FunctionalitySingleComponent } from './functionality-single/functionality-single.component';
-import { ProjectSingleComponent } from './project-single/project-single.component';
+
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProjectsListComponent} from './components/projects-list/projects-list.component';
+import { ProjectSingleComponent } from './components/project-single/project-single.component';
+import { FunctionalitySingleComponent } from './components/functionality-single/functionality-single.component';
+import { FunctionalitysListComponent } from './components/functionalitys-list/functionalitys-list.component';
+import { ComponentSingleComponent } from './components/functionalityComponent-single/component-single.component';
+import { ComponentsListComponent } from './components/FunctionalityComponents-list/components-list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
+    ProjectSingleComponent,
     ProjectsListComponent,
-    FunctionalitysListComponent,
-    ComponentsListComponent,
-    ComponentSingleComponent,
     FunctionalitySingleComponent,
-    ProjectSingleComponent
+    FunctionalitysListComponent,
+    ComponentSingleComponent,
+    ComponentsListComponent
   ],
   imports: [
     BrowserModule,
