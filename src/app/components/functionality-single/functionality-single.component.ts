@@ -33,8 +33,4 @@ export class FunctionalitySingleComponent implements OnInit {
     this.projectService.getProjectById(projectId).subscribe(project => this.project = project)
   }
 
-
-  
-
-
 }
