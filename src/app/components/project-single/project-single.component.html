@@ -1,1 +1,18 @@
 <p>project-single works!</p>
+<a routerLink="/projects">back</a>
+
+<div *ngIf="project">
+    <div class="text-center  bg-secondary p-3 text-white">
+        <H2 > {{project.name}}</H2>
+        <p> Description : {{project.describ}}</p> 
+    </div>
+    <div *ngFor="let functionality of project.functionalities">
+        <div class="card">
+            <h3>{{functionality.name}}</h3>
+            <p><small>identifiant : {{functionality.id}}</small></p>
+            <p>version : {{functionality.version}}</p>
+            <p>description : {{functionality.describ}}</p>
+            <a routerLink="/functionality/{{functionality.id}}" class="btn btn-primary col-6 m-auto">Voir cette functionalitée</a>
+        </div>
+    </div>
+</div>

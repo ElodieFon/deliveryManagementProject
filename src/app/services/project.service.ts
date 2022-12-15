@@ -11,12 +11,12 @@ export class ProjectService {
 
   constructor() { }
 
-  getAllProjects(){
+  getAllProjects():Observable<Project[]>{
     const allProjects = of(PROJETS);
-    return allProjects ; 
+    return allProjects;
   }
-  getProjectById(idProject : number){
-    const project = PROJETS.find(p => p.id === idProject)!;
-    return project;
+  getProjectById(id: number):Observable<Project>{
+    const project = PROJETS.find(p => p.id === id)!;
+    return of (project);
   }
 }
