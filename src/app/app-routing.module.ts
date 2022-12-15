@@ -13,8 +13,8 @@ const routes: Routes = [
   {path: 'dashboard', component:DashboardComponent},
   {path: 'projects', component:ProjectsListComponent},
   {path: 'project/:projectId',component:ProjectSingleComponent},
-  {path: 'functionality/:functionalityId',component:FunctionalitySingleComponent},
-  {path: 'component/:componentId',component:ComponentSingleComponent}
+  {path: 'project/:projectId/functionality/:functionalityId',component:FunctionalitySingleComponent},
+  {path: 'project/:projectId/functionality/:functionalityId/component/:componentId',component:ComponentSingleComponent}
 ];
 
 @NgModule({

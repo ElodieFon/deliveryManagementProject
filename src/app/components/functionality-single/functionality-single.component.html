@@ -1,1 +1,20 @@
 <p>functionality-single works!</p>
+<div *ngIf="project">
+    <div class="text-center  bg-secondary p-3 text-white">
+        <H2 > {{project.name}}</H2>
+        <p> Description : {{project.describ}}</p> 
+    </div>
+    <div *ngFor="let functionality of project.functionalities">
+        <div *ngIf="functionalityId === functionality.id">
+            <h3 class="text-center m-2"> {{functionality.name}}</h3>
+            <div class="container-fluid d-flex col-12 flex-wrap justify-content-center">
+                <div *ngFor="let component of functionality.components" class="card col-3 p-2 m-2">                                
+                    <p>{{component.name}}</p>
+                    <p><small>identifiant : {{component.id}}</small></p>
+                    <p>version : {{component.version}}</p>
+                    <p>description : {{component.describ}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

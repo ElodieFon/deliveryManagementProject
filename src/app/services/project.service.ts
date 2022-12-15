@@ -3,6 +3,7 @@ import{ Observable, of}from 'rxjs';
 
 import { Project } from '../models/Project';
 import { PROJETS } from '../mock-projects';
+import { Functionality } from '../models/Functionality';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,6 @@ export class ProjectService {
     const project = PROJETS.find(p => p.id === id)!;
     return of (project);
   }
+
+
 }
