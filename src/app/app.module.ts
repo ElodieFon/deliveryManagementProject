@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectsListComponent} from './components/projects-list/projects-list.component';
 import { ProjectSingleComponent } from './components/project-single/project-single.component';
 import { FunctionalitySingleComponent } from './components/functionality-single/functionality-single.component';
