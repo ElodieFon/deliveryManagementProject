@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Directive, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -11,6 +11,8 @@ import { ProjectService } from 'src/app/services/project.service';
   templateUrl: './functionality-single.component.html',
   styleUrls: ['./functionality-single.component.scss']
 })
+
+
 export class FunctionalitySingleComponent implements OnInit {
   @Input()project?:Project;
   @Input()functionality?:Functionality;
@@ -32,5 +34,5 @@ export class FunctionalitySingleComponent implements OnInit {
     const projectId = Number(this.route.snapshot.paramMap.get('projectId'));
     this.projectService.getProjectById(projectId).subscribe(project => this.project = project)
   }
-
+  
 }
