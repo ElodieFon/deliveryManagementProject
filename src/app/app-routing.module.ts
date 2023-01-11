@@ -12,9 +12,9 @@ const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {path: 'dashboard', component:DashboardComponent},
   {path: 'projects', component:ProjectsListComponent},
-  {path: 'project/:projectId',component:ProjectSingleComponent},
-  {path: 'project/:projectId/functionality/:functionalityId',component:FunctionalitySingleComponent},
-  {path: 'project/:projectId/functionality/:functionalityId/component/:componentId',component:ComponentSingleComponent}
+  {path: 'project/:id',component:ProjectSingleComponent},
+  {path: 'project/:id/functionality/:functionalityId',component:FunctionalitySingleComponent},
+  {path: 'project/:id/functionality/:functionalityId/component/:componentId',component:ComponentSingleComponent}
 ];
 
 @NgModule({
