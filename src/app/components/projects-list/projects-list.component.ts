@@ -11,7 +11,7 @@ import { ProjectService } from 'src/app/services/project.service';
 })
 export class ProjectsListComponent implements OnInit {
 
-  allProjects : Project[] = [];
+  projects : Project[] = [];
 
 
   constructor(private projectService : ProjectService ) { 
@@ -21,8 +21,13 @@ export class ProjectsListComponent implements OnInit {
 
   ngOnInit(): void { 
    
-      this.projectService.getAllProjects()
-    .subscribe(allProjects => this.allProjects = allProjects);
+    this.projectService.getAllProjects()
+    .subscribe(projects => this.projects = projects);
+  }
+
+  deleteProject(project : Project){
+    this.projects = this.projects.filter(p => p !== project);
+    this.projectService.deleteProject(project.id).subscribe();
   }
  //
 

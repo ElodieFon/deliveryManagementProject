@@ -1,0 +1,11 @@
+<p class="text-center fs-1">Ajouter un projet</p>
+<div>
+    <label for="new-project">project name : </label>
+    <input type="text " id="new-project" #projectName/>
+    <label for="describe">project name : </label>
+    <input type="text " id="describe" #projectDescribe/>
+    <button  type="button" (click)="newProject(projectName.value , projectDescribe.value); 
+                                                projectName.value= '' ; 
+                                                projectDescribe.value=''">creer</button>
+</div>
+

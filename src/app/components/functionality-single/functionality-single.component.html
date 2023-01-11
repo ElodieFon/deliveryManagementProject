@@ -1,20 +1,18 @@
 <a class="btn btn-primary m-2" routerLink="/projects">projets</a>
-<a class="btn btn-danger m-2" routerLink="../..">Back</a>
+<a class="btn btn-danger m-2" (click)="goBack()">Back</a>
 <div *ngIf="project">
     <div class="text-center  p-3text-white projectName">
         <H2 > {{project.name}}</H2>
         <p> Description : {{project.describe}}</p> 
     </div>
-    <div *ngIf="functionality ">
+    <div *ngIf="functionality">
 
         <h3 class="text-center">functionalalitée : {{functionality.name}}</h3>
-    <div class="d-flex flex-wrap">
-          <div *ngFor="let component of functionality.components" class="card m-2 p-2">
-              <h3> {{ component.name}}</h3>
+        <div class="d-flex flex-wrap">
+            <div *ngFor="let component of functionality.components" class="card m-2 p-2">
+                <h3> {{ component.name}}</h3>
               <p>function : {{functionality.name}} , {{project.name}}</p>
+            </div>
         </div>
-    </div>
-      
-
     </div>
 </div>

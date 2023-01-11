@@ -40,5 +40,7 @@ export class FunctionalitySingleComponent implements OnInit {
     const functionalityId = Number(this.route.snapshot.paramMap.get('functionalityId'));
     this.projectService.getFunctionalityById(functionalityId).subscribe(functionality => this.functionality = functionality)
   }
-
+  goBack():void {
+    this.location.back();
+  }
 }

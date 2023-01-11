@@ -1,11 +1,12 @@
 
-<a class="btn btn-primary m-2" routerLink="/projects">back</a>
+<a class="btn btn-primary m-2"(click)="goBack()">back</a>
 
 
 <div *ngIf="project">
     <div class="text-center  p-3  projectName">
         <H2 > {{project.name}}</H2>
         <p> Description : {{project.describe}}</p> 
+        <a routerLink="/project/{{project.id}}/update">modifier</a>
     </div>
     <div class="container-fluid d-flex col-12 flex-wrap">
         <div *ngFor="let functionality of project.functionalities" class="card m-2 p-2 ">      
@@ -13,6 +14,7 @@
             <h3>{{functionality.name}}</h3>
             <p>description : {{functionality.describe}} </p>   
             <a routerLink="/project/{{project.id}}/functionality/{{functionality.id}}" class="btn btn-primary col-6 m-auto">Voir cette functionalitée</a> 
+            
         </div>
     </div>  
 </div>

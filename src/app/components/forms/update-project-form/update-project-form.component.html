@@ -1,0 +1,11 @@
+<div *ngIf="project">
+    <div class="text-center  p-3  projectName">
+        <H2 > {{project.name}}</H2>
+        <p> Description : {{project.describe}}</p> 
+    </div>
+    <label for ="project-name">nouveau nom :</label>
+    <input type="text" id="project-name" [(ngModel)]="project.name" placeholder="{{project.name}}">
+    <label for="project-describe">nouvelle description : </label>
+    <textarea name="describe" id="project-describe" cols="100" rows="5" [(ngModel)]="project.describe" placeholder="{{project.describe}}"></textarea>
+    <button type="button"(click)="saveProject()">Sauvegarder</button>nie
+</div>
