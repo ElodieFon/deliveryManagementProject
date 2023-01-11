@@ -5,16 +5,15 @@
 <div *ngIf="project">
     <div class="text-center  p-3  projectName">
         <H2 > {{project.name}}</H2>
-        <p> Description : {{project.describ}}</p> 
+        <p> Description : {{project.describe}}</p> 
     </div>
-</div>
-<div *ngIf="project" class="container-fluid d-flex col-12 flex-wrap justify-content-center">
-    <div *ngFor="let functionality of project.functionalities" class="card col-3 p-2 m-2">    
-        <h3>{{functionality.name}}</h3>
-        <p><small>identifiant : {{functionality.id}}</small></p>
-        <p>version : {{functionality.version}}</p>
-        <p>description : {{functionality.describ}} du Projet : {{project.name}}</p>
-        <a routerLink="../../project/{{project.id}}/functionality/{{functionality.id}}" class="btn btn-primary col-6 m-auto">Voir cette functionalitée</a>     
-    </div>
+    <div class="container-fluid d-flex col-12 flex-wrap">
+        <div *ngFor="let functionality of project.functionalities" class="card m-2 p-2 ">      
+            <p><small> identifiant : {{functionality.id}} </small> </p> 
+            <h3>{{functionality.name}}</h3>
+            <p>description : {{functionality.describe}} </p>   
+            <a routerLink="/project/{{project.id}}/functionality/{{functionality.id}}" class="btn btn-primary col-6 m-auto">Voir cette functionalitée</a> 
+        </div>
+    </div>  
 </div>
 

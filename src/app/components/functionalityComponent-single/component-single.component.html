@@ -3,20 +3,11 @@
 <div *ngIf="project">
     <div class="text-center   p-3  projectName">
         <H2 > {{project.name}}</H2>
-        <p> Description : {{project.describ}}</p> 
+        <p> Description : {{project.describe}}</p> 
     </div>
     <div *ngFor="let functionality of project.functionalities">
         <div *ngIf="functionalityId === functionality.id">  
             <h3 class="text-center m-2"> {{functionality.name}}</h3>
-            <div *ngFor="let component of functionality.components" >
-                <div *ngIf="componentId === component.id">                       
-                    <h4 class="text-center m-2">{{component.name}}</h4>
-                    <p><small>identifiant : {{component.id}}</small></p>
-                    <p>version : {{component.version}}</p>
-                    <p>description : {{component.describ}}</p>
-                </div>
-            </div>  
-           
         </div>
     </div>
 </div>
