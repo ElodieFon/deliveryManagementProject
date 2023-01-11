@@ -1,15 +1,17 @@
-import { ComponentFunctionality } from './ComponentFunctionality';
+import { FunctionalityComponent } from './FunctionalityComponent';
 
 export class Functionality {
+    lenght: any;
 
     constructor(  
         public id : number ,
-        public name : string ,
-        public describ : string ,
-        public version : number,
+        public name : string ,      
+        public fk_project : number,  
+        public describe? : string ,  
+        public version? : number,
         public dateStart? : Date,
         public date? : Date,
         public dateEnd? : Date ,   
-        public components? : ComponentFunctionality[]
+        public components? :FunctionalityComponent[]
     ){}
 }

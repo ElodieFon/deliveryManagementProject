@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 
 import { Project } from 'src/app/models/Project';
 import { Functionality } from 'src/app/models/Functionality';
-import { ComponentFunctionality } from 'src/app/models/ComponentFunctionality';
+import { FunctionalityComponent } from 'src/app/models/FunctionalityComponent';
 import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class ComponentSingleComponent implements OnInit {
 
   @Input()project?:Project;
   @Input()functionality?:Functionality;
-  @Input()componentFunctionality?:ComponentFunctionality;
+  @Input()Functionalitycomponent?:FunctionalityComponent;
 
   constructor(
     private route: ActivatedRoute,

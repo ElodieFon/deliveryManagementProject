@@ -4,6 +4,9 @@ import { Location } from '@angular/common';
 
 import { Project } from 'src/app/models/Project';
 import { ProjectService } from 'src/app/services/project.service';
+import { Functionality } from '../../models/Functionality';
+import { findIndex } from 'rxjs';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-project-single',
@@ -11,18 +14,23 @@ import { ProjectService } from 'src/app/services/project.service';
   styleUrls: ['./project-single.component.scss']
 })
 export class ProjectSingleComponent implements OnInit {
+
 @Input()project?:Project;
+
   constructor(
     private route: ActivatedRoute,
     private location: Location,
     private projectService : ProjectService
   ) { }
 
+
   ngOnInit(): void {
-    this.getProjectById();
+    this.getProjectById();  
   }
+  
   getProjectById():void {
-    const projectId = Number(this.route.snapshot.paramMap.get('projectId'));
-    this.projectService.getProjectById(projectId).subscribe(project => this.project = project)
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.projectService.getProjectById(id)
+    .subscribe(project => this.project = project)
   }
 }

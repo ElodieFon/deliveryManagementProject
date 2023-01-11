@@ -1,10 +1,11 @@
 
-export class ComponentFunctionality{
+export class FunctionalityComponent{
     constructor(      
         public id : number ,
         public name : string ,
-        public describ: string ,
-        public version : number,
+        public fk_functionality : number ,
+        public describe?: string ,
+        public version ?: number,
         public dateStart? : Date,
         public date? : Date,
         public dateEnd?: Date        
