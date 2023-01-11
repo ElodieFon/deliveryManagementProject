@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { Project } from 'src/app/models/Project';
 import { Functionality } from 'src/app/models/Functionality';
 import { ProjectService } from 'src/app/services/project.service';
+import { FunctionalityComponent } from 'src/app/models/FunctionalityComponent';
 
 @Component({
   selector: 'app-functionality-single',
@@ -15,6 +16,7 @@ import { ProjectService } from 'src/app/services/project.service';
 
 export class FunctionalitySingleComponent implements OnInit {
   @Input()project?:Project;
+
   @Input()functionality?:Functionality;
 
   constructor(
@@ -24,15 +26,19 @@ export class FunctionalitySingleComponent implements OnInit {
     
   ) { }
   
-  functionalityId = Number(this.route.snapshot.paramMap.get('functionalityId'));
 
   ngOnInit(): void {
     this.getProjectById();
-   
+    this.getFunctionalityById();
+
   }
   getProjectById():void {
-    const projectId = Number(this.route.snapshot.paramMap.get('projectId'));
+    const projectId = Number(this.route.snapshot.paramMap.get('id'));
     this.projectService.getProjectById(projectId).subscribe(project => this.project = project)
   }
-  
+  getFunctionalityById():void {
+    const functionalityId = Number(this.route.snapshot.paramMap.get('functionalityId'));
+    this.projectService.getFunctionalityById(functionalityId).subscribe(functionality => this.functionality = functionality)
+  }
+
 }
